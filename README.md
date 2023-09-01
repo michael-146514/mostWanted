@@ -1,2 +1,1 @@
-# mostWanted
-DevCodeCamp Most Wanted
+# MostWanted_FSF_JS_Starter
