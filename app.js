@@ -147,6 +147,12 @@ function mainMenu(person, people) {
   return mainMenu(person, people);
 }
 
+function findPersonFamily(person, people){
+  family = people.filter(
+     person.lastName === vlastName
+  );
+}
+
 function displayPersonInfo(person) {
   alert(
     `${person.firstName} ${person.lastName} \n Gender: ${person.gender} \n dob: ${person.dob}, \n Height: ${person.height} \n Weight: ${person.weight} \n Eye Color: ${person.eyeColor} \n Occupation: ${person.occupation} \n Parents Id: ${person.parents} \n Spouse Id: ${person.currentSpouse}`
