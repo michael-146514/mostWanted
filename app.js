@@ -48,7 +48,7 @@ function searchPeopleDataSet(people) {
 
 function searchByTraits(people) {
   const lookuptraits = prompt(
-    "Please enter a trait you would like to lookup for a user"
+    `What kind of trait do you want to look up? \n Gender\n Height\n Weight\n Eye Color`
   );
   switch (lookuptraits) {
     case "gender":
@@ -148,9 +148,9 @@ function mainMenu(person, people) {
 }
 
 function findPersonFamily(person, people){
-  family = people.filter(
-     person.lastName === vlastName
-  );
+  const LastName = person.lastName; 
+  const family = people.filter((p) => p.lastName === LastName);
+  return family;
 }
 
 function displayPersonInfo(person) {
