@@ -85,6 +85,14 @@ function searchByTraits(people) {
         (person) => person.eyeColor === searchByEyeColor
       );
       return eyeColorFilterResults;
+      case "occupation":
+      const searchByOccupation = prompt(
+        "Please enter a gender you would like to lookup."
+      );
+      const occupationFilterResults = people.filter(
+        (person) => person.occupation === searchByOccupation
+      );
+      return occupationFilterResults;
     default:
       alert("Invalid trait entered. Please enter a valid trait.");
       return [];
@@ -146,6 +154,13 @@ function mainMenu(person, people) {
 
   return mainMenu(person, people);
 }
+
+function findPersonDescendants(person, people) {
+  const personId = person.id; 
+  const family = people.filter((p) => p.parents.includes(personId));
+  return family;
+}
+
 
 function findPersonFamily(person, people){
   const LastName = person.lastName; 
